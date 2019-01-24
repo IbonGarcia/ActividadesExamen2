@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginTop="10dp"
+    tools:context=".Ficheros1">
+
+    <TextView
+        android:id="@+id/etiqueta1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contenido a escribir:"
+        android:textSize="20dp" />
+    <EditText
+        android:id="@+id/editext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etiqueta1"
+        android:layout_centerHorizontal="true"
+        android:textSize="15dp"/>
+    <Button
+        android:id="@+id/aniadirFichInt"
+        android:layout_below="@id/editext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AÑADIR FICH.INT"
+        android:onClick="escribirInterno"/>
+    <Button
+        android:id="@+id/aniadirFichExt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editext"
+        android:layout_toRightOf="@id/aniadirFichInt"
+        android:text="AÑADIR FICH.EXT"
+        android:onClick="escribirExterno"/>
+    <Button
+        android:id="@+id/leerFichInt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/aniadirFichExt"
+        android:text="LEER FICH.INT"
+        android:onClick="leerInterno"/>
+    <Button
+        android:id="@+id/leerFichExt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LEER FICH.EXT"
+        android:layout_below="@id/aniadirFichInt"
+        android:layout_toRightOf="@id/leerFichInt"
+        android:onClick="leerExterno"/>
+    <Button
+        android:id="@+id/leerRecurso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/aniadirFichInt"
+        android:layout_toRightOf="@id/leerFichExt"
+        android:text="LEER RECURSO"
+        android:onClick="leerRecurso"/>
+    <Button
+        android:id="@+id/borrarFichInt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/leerFichInt"
+        android:text="BORRAR FICH.INT"
+        android:onClick="borrarInterno"/>
+    <Button
+        android:id="@+id/borrarFichExt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/leerFichInt"
+        android:layout_toRightOf="@id/borrarFichInt"
+        android:text="BORRAR FICH.EXT"
+        android:onClick="borrarExterno"/>
+    <TextView
+        android:id="@+id/etiqueta2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="El contenido del fichero es:"
+        android:layout_below="@id/borrarFichInt"
+        android:textSize="20dp"/>
+    <TextView
+        android:id="@+id/contenidoFichero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etiqueta2"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"/>
+
+
+</RelativeLayout>
