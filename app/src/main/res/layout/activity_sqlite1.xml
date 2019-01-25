@@ -32,9 +32,5 @@
             android:textSize="20dp"
             android:text="NOMBRE:"
             android:textColor="@color/Blanco"/>
-
     </LinearLayout>
-
-
-
 </RelativeLayout>
