@@ -21,7 +21,8 @@
         <activity android:name=".Ficheros1" />
         <activity android:name=".Ficheros2" />
         <activity android:name=".Ficheros3" />
-        <activity android:name=".Multimedia"></activity>
+        <activity android:name=".Multimedia" />
+        <activity android:name=".SQLite2"></activity>
     </application>
 
 </manifest>

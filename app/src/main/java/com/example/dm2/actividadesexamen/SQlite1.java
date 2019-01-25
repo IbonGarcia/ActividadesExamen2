@@ -2,7 +2,6 @@ package com.example.dm2.actividadesexamen;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -18,13 +17,13 @@ public class SQlite1 extends AppCompatActivity {
 
         datos = findViewById(R.id.datos);
 
-        LibrosSQliteHelper ldb = new LibrosSQliteHelper(this,"DBLibros",null,1);
+        ContactosSQliteHelper ldb = new ContactosSQliteHelper(this,"DBAgenda",null,1);
 
         SQLiteDatabase db = ldb.getWritableDatabase();
         String datosconsulta="";
         if (db!=null){
 
-          Cursor info = db.rawQuery("SELECT * FROM LIBROS",null);
+          Cursor info = db.rawQuery("SELECT * FROM CONTACTOS",null);
           if (info.moveToFirst()){
               int cont=0;
               do{
