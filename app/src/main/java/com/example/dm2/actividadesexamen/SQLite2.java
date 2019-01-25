@@ -8,5 +8,7 @@ public class SQLite2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sqlite2);
+
+        this.setTitle("Gestion de libros");
     }
 }

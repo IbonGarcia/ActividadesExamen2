@@ -1,9 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/madera"
+    android:padding="20dp"
     tools:context=".SQLite2">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/Blanco"
+        android:textStyle="bold"
+        android:text="LIBROS"
+        android:textSize="30dp"/>
+    <LinearLayout
+        android:id="@+id/layoutISBN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titulo"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/etiquetaISBN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/Blanco"
+            android:text="ISBN :"
+            android:textSize="20dp"/>
+        <EditText
+            android:id="@+id/editISBN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layoutTITULO"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutISBN"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/etiquetaTITULO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/Blanco"
+            android:text="TITULO :"
+            android:textSize="20dp"/>
+        <EditText
+            android:id="@+id/editTITULO"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layoutAUTOR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutTITULO"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/etiquetaAUTOR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/Blanco"
+            android:text="AUTOR :"
+            android:textSize="20dp"/>
+        <EditText
+            android:id="@+id/editAUTOR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/controles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/layoutAUTOR">
+        <Button
+            android:id="@+id/botonInsertar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INSERTAR"/>
+        <Button
+            android:id="@+id/botonBuscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BUSCAR"/>
+        <Button
+            android:id="@+id/botonVisualizar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VISUALIZAR"/>
+        <Button
+            android:id="@+id/botonLimpiar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LIMPIAR"/>
+    </LinearLayout>
+</RelativeLayout>
