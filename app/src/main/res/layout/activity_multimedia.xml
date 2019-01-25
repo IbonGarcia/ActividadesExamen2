@@ -13,29 +13,65 @@
         android:id="@+id/nombreCancion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nombre de la cancion:"
+        android:text="Cancion: "
         android:layout_centerHorizontal="true"
         android:textSize="20dp"/>
 
     <ImageView
-        android:id="@+id/icono"
-        android:layout_width="wrap_content"
+        android:id="@+id/mp3"
+        android:layout_width="match_parent"
         android:layout_height="375dp"
-        android:layout_alignParentStart="true"
         android:layout_below="@+id/nombreCancion"
-        android:src="@drawable/mp3"
-        android:layout_alignParentLeft="true" />
+        android:src="@drawable/mp3" />
     <TextView
-        android:id="@+id/duracion"
+        android:id="@+id/etiqueta2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Duracion:"
         android:textSize="20dp"
-        android:layout_below="@id/icono"
+        android:layout_below="@id/mp3"
         android:layout_centerHorizontal="true"/>
     <SeekBar
+        android:id="@+id/duracion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/duracion"/>
+        android:layout_below="@id/etiqueta2"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/duracion"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true">
+
+        <ImageButton
+            android:id="@+id/atras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_rewind"
+            android:layout_weight="1"
+            android:onClick="rewind"/>
+        <ImageButton
+            android:id="@+id/pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_pause"
+            android:layout_marginLeft="25dp"
+            android:onClick="pause"/>
+        <ImageButton
+            android:id="@+id/play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_play"
+            android:layout_marginLeft="25dp"
+            android:onClick="play"/>
+        <ImageButton
+            android:id="@+id/adelante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_forward"
+            android:layout_marginLeft="25dp"
+            android:onClick="forward"/>
+
+    </LinearLayout>
 
 </RelativeLayout>
