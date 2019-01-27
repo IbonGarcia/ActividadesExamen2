@@ -21,84 +21,122 @@
         android:id="@+id/layoutISBN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/titulo"
-        android:layout_marginTop="20dp">
+        android:layout_below="@id/titulo">
         <TextView
             android:id="@+id/etiquetaISBN"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/Blanco"
-            android:text="ISBN :"
-            android:textSize="20dp"/>
+            android:text="ISBN     :"
+            android:textSize="15dp"/>
         <EditText
             android:id="@+id/editISBN"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="number"
             android:layout_marginLeft="15dp"/>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/layoutTITULO"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/layoutISBN"
-        android:layout_marginTop="20dp">
+        android:layout_below="@id/layoutISBN">
         <TextView
             android:id="@+id/etiquetaTITULO"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/Blanco"
             android:text="TITULO :"
-            android:textSize="20dp"/>
+            android:textSize="15dp"/>
         <EditText
             android:id="@+id/editTITULO"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="text"
             android:layout_marginLeft="15dp"/>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/layoutAUTOR"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/layoutTITULO"
-        android:layout_marginTop="20dp">
+        android:layout_below="@id/layoutTITULO">
         <TextView
             android:id="@+id/etiquetaAUTOR"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/Blanco"
             android:text="AUTOR :"
-            android:textSize="20dp"/>
+            android:textSize="15dp"/>
         <EditText
             android:id="@+id/editAUTOR"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="text"
             android:layout_marginLeft="15dp"/>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/controles"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:layout_below="@id/layoutAUTOR">
         <Button
             android:id="@+id/botonInsertar"
             android:layout_width="wrap_content"
+            android:layout_weight="3"
             android:layout_height="wrap_content"
+            android:onClick="insertar"
             android:text="INSERTAR"/>
         <Button
             android:id="@+id/botonBuscar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:onClick="buscar"
             android:text="BUSCAR"/>
         <Button
-            android:id="@+id/botonVisualizar"
+            android:id="@+id/botonListar"
+            android:layout_width="wrap_content"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:onClick="listar"
+            android:text="LISTAR"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/controles2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/controles">
+        <Button
+            android:id="@+id/botonModificar"
+            android:layout_width="wrap_content"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:onClick="modificar"
+            android:text="MODIFICAR"/>
+        <Button
+            android:id="@+id/botonBorrar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="VISUALIZAR"/>
+            android:layout_weight="3"
+            android:onClick="borrar"
+            android:text="BORRAR"/>
         <Button
             android:id="@+id/botonLimpiar"
             android:layout_width="wrap_content"
+            android:layout_weight="3"
             android:layout_height="wrap_content"
-            android:text="LIMPIAR"/>
+            android:text="LIMPIAR"
+            android:onClick="limpiar"/>
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/contenido"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/controles2"
+        android:text="Lista de libros:"
+        android:textColor="@color/Blanco"
+        android:textSize="18dp"/>
 </RelativeLayout>
