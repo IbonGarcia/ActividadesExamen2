@@ -3,6 +3,8 @@
     package="com.example.dm2.actividadesexamen">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>
 
     <application
         android:allowBackup="true"
@@ -11,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SQLite2">
+        <activity android:name=".ContentProvider1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,7 +24,8 @@
         <activity android:name=".Ficheros2" />
         <activity android:name=".Ficheros3" />
         <activity android:name=".Multimedia" />
-        <activity android:name=".SQlite1"/>
+        <activity android:name=".SQlite1" />
+        <activity android:name=".SQLite2"></activity>
     </application>
 
 </manifest>
