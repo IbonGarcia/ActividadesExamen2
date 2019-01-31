@@ -44,8 +44,11 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="iconShape" value="CIRCLE" />
-                                      <entry key="outputName" value="ic_forward" />
+                                      <entry key="assetType" value="IMAGE" />
+                                      <entry key="cropped" value="true" />
+                                      <entry key="iconShape" value="NONE" />
+                                      <entry key="imageAsset" value="C:\Users\dm2\Desktop\twitch.png" />
+                                      <entry key="outputName" value="ic_twitch" />
                                     </map>
                                   </option>
                                 </PersistentState>
